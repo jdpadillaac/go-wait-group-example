@@ -8,3 +8,4 @@ This project is an example to show how to use WaitGroups in real projects, also 
 - MySql: https://github.com/go-sql-driver/mysql
 - Echo: https://echo.labstack.com/
 - Go Validator: https://github.com/go-playground/validator
+- GoDotEnv: https://github.com/joho/godotenv
