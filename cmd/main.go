@@ -1,6 +1,7 @@
 package main
 
 import (
+	appmysql "github.com/jdpadillaac/go-waitgroups-example/infrastructure/mysql"
 	restapi "github.com/jdpadillaac/go-waitgroups-example/infrastructure/rest_api"
 	"github.com/jdpadillaac/go-waitgroups-example/internal"
 	"github.com/joho/godotenv"
@@ -15,5 +16,6 @@ func main() {
 	}
 
 	config := internal.SetAppConfig()
+	appmysql.SetCnn(config)
 	restapi.Start(config)
 }
