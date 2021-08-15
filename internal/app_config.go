@@ -12,10 +12,12 @@ type AppConfig struct {
 	MySqlUser     string
 	MySqlPassword string
 	MySqlDataBase string
+	AppPort       string
 }
 
 func SetAppConfig() *AppConfig {
 	return &AppConfig{
+		AppPort:       os.Getenv("APP_PORT"),
 		Env:           os.Getenv("ENV"),
 		Version:       os.Getenv("VERSION"),
 		BaseUrl:       os.Getenv("BASE_URL"),

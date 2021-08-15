@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	restapi "github.com/jdpadillaac/go-waitgroups-example/infrastructure/rest_api"
 	"github.com/jdpadillaac/go-waitgroups-example/internal"
 	"github.com/joho/godotenv"
 	"log"
@@ -15,7 +15,5 @@ func main() {
 	}
 
 	config := internal.SetAppConfig()
-
-	fmt.Println(config.Version)
-
+	restapi.Start(config)
 }
